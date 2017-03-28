@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Stylesam</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href='css/style.css'>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="title">
+			<span style="color: #fd3267">C</span>
+			<span style="color: #66D9EF">o</span>
+			<span style="color: #A6E22E">m</span>
+			<span style="color: #FD971F">i</span>
+			<span style="color: #9B59B6">n</span>
+			<span style="color: #1ABC9C">g</span>
+			
+			<span style="color: #A6E22E">s</span>
+			<span style="color: #fd3267">o</span>
+			<span style="color: #fd3267">o</span>
+			<span style="color: #3498DB">n</span>
+			<span style="color: #9B59B6">!</span>
+		</h1>
+		<h2 class="subtitle">
+			<span>Be</span> 
+			<span>ready,</span>
+			<span>there</span>
+			<span>is just:</span>
+		</h2>
+
+		<ul class="countdown">
+			<li>
+				<span class="days">OO</span>
+				<p class="days_ref">days</p>
+			</li>
+			<li>
+				<span class="hours">OO</span>
+				<p class="hours_ref">hours</p>
+			</li>
+			<li>
+				<span class="minutes">OO</span>
+				<p class="minutes_ref">minutes</p>
+			</li>
+			<li>
+				<span class="seconds">OO</span>
+				<p class="seconds_ref">seconds</p>
+			</li>
+		</ul>
+	</div>
+
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.downCount/1.0.0/jquery.downCount.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+	<script>
+		(function(){
+					// Get the date
+			function e() {
+				var e = new Date;
+				e.setDate(e.getDate() + 11);
+
+				var dd = e.getDate();
+				var mm = e.getMonth() + 1;
+				var y = e.getFullYear();
+
+				var futureFormattedDate = mm + "/" + dd + "/" + y + ' 12:00:00';
+
+				return futureFormattedDate;
+			}
+
+			$('.countdown').downCount({
+				date: e(),
+				offset: -4
+			});
+		}())
+	</script>
+</body>
+</html>
