@@ -1,81 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Stylesam</title>
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href='css/style.css'>
-</head>
-<body>
-	<div class="wrapper">
-		<h1 class="title">
-			<span style="color: #fd3267">C</span>
-			<span style="color: #66D9EF">o</span>
-			<span style="color: #A6E22E">m</span>
-			<span style="color: #FD971F">i</span>
-			<span style="color: #9B59B6">n</span>
-			<span style="color: #1ABC9C">g</span>
-			
-			<span style="color: #A6E22E">s</span>
-			<span style="color: #fd3267">o</span>
-			<span style="color: #fd3267">o</span>
-			<span style="color: #3498DB">n</span>
-			<span style="color: #9B59B6">!</span>
-		</h1>
-		<h2 class="subtitle">
-			<span>Be</span> 
-			<span>ready,</span>
-			<span>there</span>
-			<span>is just:</span>
-		</h2>
-
-		<ul class="countdown">
-			<li>
-				<span class="days">OO</span>
-				<p class="days_ref">days</p>
-			</li>
-			<li>
-				<span class="hours">OO</span>
-				<p class="hours_ref">hours</p>
-			</li>
-			<li>
-				<span class="minutes">OO</span>
-				<p class="minutes_ref">minutes</p>
-			</li>
-			<li>
-				<span class="seconds">OO</span>
-				<p class="seconds_ref">seconds</p>
-			</li>
-		</ul>
-	</div>
-
-	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.downCount/1.0.0/jquery.downCount.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
-	<script>
-		(function(){
-					// Get the date
-			function e() {
-				var e = new Date;
-				e.setDate(e.getDate() + 5);
-
-				var dd = e.getDate();
-				var mm = e.getMonth() + 1;
-				var y = e.getFullYear();
-
-				var futureFormattedDate = mm + "/" + dd + "/" + y + ' 12:00:00';
-
-				return futureFormattedDate;
-			}
-
-			$('.countdown').downCount({
-				date: e(),
-				offset: -4
-			});
-		}())
-	</script>
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="msapplication-TileColor" content="#6441A4">
+    <meta name="msapplication-TileImage" content="favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#6441A4">
+    <title>Sam`s Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css" media="screen and (min-width: 770px)">
+    <link rel="stylesheet" href="css/index-770max.css" media="screen and (max-width: 770px)">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#6441A4">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h3 class="header-title">StyleSam</h3>
+        <div class="hamburger-1 hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+        <ul class="tab-list">
+          <li class="tab-items"><a href="#about">Обо мне</a></li>
+          <li class="tab-items"><a href="#media">Медиа</a></li>
+          <li class="tab-items"><a href="#resume">Резюме</a></li>
+          <li class="tab-items"><a href="#portfolio">Проекты</a></li>
+          <li class="tab-items"><a href="#contact">Контакты</a></li>
+        </ul>
+      </header>
+      <div id="container">
+        <div id="left"><span class="initials">S</span>
+          <div class="rainbow"></div>
+          <div class="content">
+            <section class="tab-item" id="about">
+              <h2 data-shadow-text="Обо мне">Обо мне</h2>
+              <div class="about-content">
+                <p>
+                  Я веб-разработчик, пишу и запускаю веб сервисы. Разрабатываю проекты разной сложности, делаю верстку и посадку на CMS WordPress, так же пишу бэкенд для сервисов.
+                  
+                </p>
+                <p>
+                  Предпочитаю создавать проекты с нуля, взаимодействовать с остальными разработчиками и дизайнерами из команды.
+                  
+                </p>
+                <p>
+                  Сдаю проекты в срок. Работаю по договору. За срыв дедлайнов несу материальную ответственность. Всегда рад обсудить задачу!
+                  
+                </p>
+                <p>
+                  Я создаю сайты, для людей. Пользователь должен заходить и восхищаться удобному дизайну и продуманной логике.
+                  
+                </p>
+                <p>Я работаю только по договору. Как-нибудь договориться не пойдет. Не работаю с производителями табака и прочих опасных ( для организма человека ) средств.</p>
+              </div>
+            </section>
+            <section class="tab-item" id="media">
+              <h2 data-shadow-text="Медиа">Медиа</h2>
+              <div class="media-container">
+                <div class="media-img"><img src="img/sam1.jpg" alt="Лето 2016 года; Республика Адыгея, река Руфабго" data-title="Лето 2016 года" data-caption="Республика Адыгея, река Руфабго"></div>
+                <div class="media-img"><img src="img/sam4.jpg" alt="Я в куртке подруги :) ; Кранснодар, Коттеджный поселок Бавария" data-title="Я в куртке подруги :)" data-caption="Крансодар, Коттеджный поселок Бавария"></div>
+                <div class="media-img"><img src="img/sam3.jpg" alt="Катаюсь на ролликах с друзьями; Краснодар, Чистяковская роща" data-title="Катаюсь на роликах с друзьями" data-caption="Краснодар, Чистяковская роща"></div>
+                <div class="media-img"><img src="img/sam2.jpg" alt="Красуюсь своими роликами; Краснодар, Кинотеатр Аврора" data-title="Красуюсь своими роликами :)" data-caption="Краснодар, Кинотеатр Аврора"></div>
+              </div>
+            </section>
+          </div>
+          <ul class="tabs">
+            <li class="first tab"><span class="tab-link">Резюме</span></li>
+            <li class="second tab"><span class="tab-link">Проекты</span></li>
+            <li class="third tab"><span class="tab-link">Контакты</span></li>
+          </ul>
+        </div>
+        <div id="right"><span class="initials">B</span>
+          <div class="content">
+            <section class="tab-item tab-item-right" id="resume">
+              <h2 data-shadow-text="Резюме">Резюме</h2>
+              <div class="resume">
+                <div class="resume-photo"><img src="http://placehold.it/150/6441A4/EAEAEA" alt="Фотография из Резюме">
+                  <h3>Back-end Разработчик</h3>
+                </div>
+                <div class="resume-content">
+                  <div class="resume-content-wx">
+                    <h3 class="resume-content-wx-title"><i class='fa fa-briefcase'></i> Опыт</h3>
+                    <ul class="resume-content-wx-list">
+                      <li class="resume-content-wx-list-item">
+                        <p class="resume-content-wx-list-item-post">Веб разработчик</p><small class="resume-content-wx-list-item-time">Июнь 2015 - наст. время</small>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="resume-content-edu">
+                    <h3 class="resume-content-edu-title"><i class='fa fa-graduation-cap'></i> Образование</h3>
+                    <ul class="resume-content-edu-list">
+                      <li class="resume-content-edu-list-item">
+                        <p class="resume-content-edu-list-item-name">МАОУ-СОШ &#8470;62</p><small class="resume-content-edu-list-item-time">янв 2015 - наст. время</small>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="resume-content-lang-skills">
+                    <h3 class="resume-content-lang-skills-title"><i class='fa fa-code'></i> Навыки в программировании</h3>
+                    <ul class="resume-content-lang-skills-list">
+                      <li class="resume-content-lang-skills-list-item" data-percent="100">
+                        <p>html &amp; pug</p>
+                        <div class="skill-bar">
+                          <div class="bar"></div>
+                        </div>
+                      </li>
+                      <li class="resume-content-lang-skills-list-item" data-percent="95">
+                        <p>css &amp; stylus</p>
+                        <div class="skill-bar">
+                          <div class="bar"></div>
+                        </div>
+                      </li>
+                      <li class="resume-content-lang-skills-list-item" data-percent="40">
+                        <p>javascript</p>
+                        <div class="skill-bar">
+                          <div class="bar"></div>
+                        </div>
+                      </li>
+                      <li class="resume-content-lang-skills-list-item" data-percent="60">
+                        <p>jquery</p>
+                        <div class="skill-bar">
+                          <div class="bar"></div>
+                        </div>
+                      </li>
+                      <li class="resume-content-lang-skills-list-item" data-percent="70">
+                        <p>php</p>
+                        <div class="skill-bar">
+                          <div class="bar"></div>
+                        </div>
+                      </li>
+                      <li class="resume-content-lang-skills-list-item" data-percent="20">
+                        <p>laravel</p>
+                        <div class="skill-bar">
+                          <div class="bar"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="resume-content-intereses">
+                    <h3 class="resume-content-intereses-title"><i class='fa fa-star'></i> Интересы</h3>
+                    <ul class="resume-content-intereses-list">
+                      <li class="resume-content-intereses-list-item">
+                        <div class="resume-content-intereses-list-item-icon"><i class="fa fa-book"></i></div><span>Книги</span>
+                      </li>
+                      <li class="resume-content-intereses-list-item">
+                        <div class="resume-content-intereses-list-item-icon"><i class="fa fa-gamepad"></i></div><span>Игры</span>
+                      </li>
+                      <li class="resume-content-intereses-list-item">
+                        <div class="resume-content-intereses-list-item-icon"><i class="fa fa-flask"></i></div><span>Наука</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="tab-item tab-item-right" id="portfolio">
+              <h2 data-shadow-text="Проекты">Проекты</h2>
+              <div class="portfolio-wrapper">
+                <div class="portfolio-card">
+                  <div class="portfolio-card-poster"><img src="img/poster1.png" alt="Revolution Project"></div>
+                  <div class="portfolio-card-content">
+                    <div class="portfolio-card-content-max" data-image="img/poster1.png"></div><a class="portfolio-card-content-link" href="http://stylesam.github.io/projects/revolution"></a>
+                    <div class="portfolio-card-content-descr">
+                      <p>Revolution</p><a class="portfolio-card-content-descr-link" href="http://stylesam.github.io/projects/revolution">
+                        Revolution<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-card">
+                  <div class="portfolio-card-poster"><img src="img/poster2.png" alt="Online Clinic Project"></div>
+                  <div class="portfolio-card-content">
+                    <div class="portfolio-card-content-max" data-image="img/poster2.png"></div><a class="portfolio-card-content-link" href="http://stylesam.github.io/projects/clinic"></a>
+                    <div class="portfolio-card-content-descr">
+                      <p>Online Clinic</p><a class="portfolio-card-content-descr-link" href="http://stylesam.github.io/projects/clinic">
+                        Online Clinic<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-card">
+                  <div class="portfolio-card-poster"><img src="img/poster3.png" alt="Family Project"></div>
+                  <div class="portfolio-card-content">
+                    <div class="portfolio-card-content-max" data-image="img/poster3.png"></div><a class="portfolio-card-content-link" href="http://stylesam.github.io/projects/family"></a>
+                    <div class="portfolio-card-content-descr">
+                      <p>Family</p><a class="portfolio-card-content-descr-link" href="http://stylesam.github.io/projects/family">
+                        Family<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="tab-item tab-item-right" id="contact">
+              <h2 data-shadow-text="Контакты">Контакты</h2>
+              <div class="contact-links">
+                <div class="contact-links-tech-info">
+                  <div class="contact-links-mail"><i class="contact-links-mail-icon"></i>
+                    <p class="contact-links-mail-title">Email</p><span class="contact-links-mail-content"><a href="mailto:stylesam@yandex.ru" target="_blank">stylesam@yandex.ru</a></span>
+                  </div>
+                  <div class="contact-links-num"><i class="contact-links-num-icon"></i>
+                    <p class="contact-links-num-title">Телефон</p><span class="contact-links-num-content"><a href="tel:89385111201">8 938 511 12 01</a></span>
+                  </div>
+                  <div class="contact-links-github"><i class="contact-links-github-icon"></i>
+                    <p class="contact-links-github-title">Github.com</p><span class="contact-links-github-content"><a href="http://github.com/stylesam" target="_blank">stylesam</a></span>
+                  </div>
+                  <div class="contact-links-codepen"><i class="contact-links-codepen-icon"></i>
+                    <p class="contact-links-codepen-title">Codepen.io</p><span class="contact-links-codepen-content"><a href="http://codepen.io/stylesam" target="_blank">stylesam</a></span>
+                  </div>
+                </div>
+                <div class="contact-links-social-info">
+                  <div class="contact-links-vk"><i class="contact-links-vk-icon"></i>
+                    <p class="contact-links-vk-title">VK.com</p><span class="contact-links-vk-content"><a href="http://vk.com/stylesams" target="_blank">stylesams</a></span>
+                  </div>
+                  <div class="contact-links-twitter"><i class="contact-links-twitter-icon"></i>
+                    <p class="contact-links-twitter-title">Twitter.com</p><span class="contact-links-twitter-content"><a href="http://twitter.com/sstylesam" target="_blank">@sstylesam</a></span>
+                  </div>
+                  <div class="contact-links-isntagram"><i class="contact-links-isntagram-icon"></i>
+                    <p class="contact-links-isntagram-title">Instagram</p><span class="contact-links-isntagram-content"><a href="http://instagram.com/stylesams" target="_blank">@stylesams</a></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!--
+            .contact-form
+            	form(name='contact-form', action='#', method='post', autocomplete='on')
+            		input.contact-form-name(
+            			type='text',
+            			name='user-name',
+            			placeholder='Имя'
+            			required
+            		)
+            		input.contact-form-email(
+            			type='email',
+            			name='user-email',
+            			placeholder='Email'
+            			required
+            		)
+            		textarea.contact-form-msg(
+            			name='msg',
+            			cols='25',
+            			rows='10',
+            			placeholder='Ваше сообщение'
+            			required
+            		)
+            		input.contact-form-submit(type='submit', value='Отправить')
+            -->
+          </div>
+          <ul class="tabs">
+            <li class="first tab"><span class="tab-link">Обо мне</span></li>
+            <li class="second tab"><span class="tab-link">Медиа</span></li>
+          </ul>
+          <!--
+          li.third
+          	span.tab-link Blog
+          <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+          -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <div class="r11-wrapper">
+    <div class="r11-pro">
+      <div class="r11-pro-svg">
+        <object type="image/svg+xml" data="svg/r11.svg">
+          <p>Your browser does not support SVG</p>
+          <p>Ваш брайузер не поддерживает SVG</p>
+        </object>
+      </div>
+      <p class="r11-pro-title">R<span class='r11-pro-title-num'>11</span> Production</p>
+    </div>
+  </div>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js"></script>
+  <script src="https://cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"></script>
+  <script src="lib/intense-image/intense.min.js"></script>
+  <script src="js/index.js"></script>
 </html>
