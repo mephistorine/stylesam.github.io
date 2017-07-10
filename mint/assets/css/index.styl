@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Nunito|Ubuntu+Mono');
+
+@import 'mint/mint'
+
+main = #7effd4
+
+html
+body
+	font-family 'Nunito', sans-serif
+	reset-box-model()
+	width 100%
+	height 100%
+	sm overflow-x hidden
+	xs overflow-x hidden
+
+h1, h2, h3, h4, h5, h6
+	font-family 'Josefin Slab', serif
+
+code[class*="language-"]
+pre[class*="language-"]
+code.inline
+	font-family 'Ubuntu Mono', Monaco, 'Andale Mono', Consolas, monospace
+	tab-size 2
+
+code.inline
+	color #ff7777
+	background-color #fff
+	border 1px solid #eee
+	padding 4px
+	border-radius 5px
+
+a
+	color main - 30%
+	text-decoration none
+	&:hover
+		text-decoration underline
+
+section
+	padding 10px
+	margin-bottom 4rem
+
+.main
+	position relative
+
+.content section
+	margin-bottom 0
+
+.wrap
+	container 960px
+
+.logo
+	width 350px
+	margin 0 auto
+	.logo-object
+		transform rotate(45deg)
+
+.title
+	font-size 6rem
+	margin .25em 0
+	&-css
+		color main
+
+.descr
+.title
+.social
+	text-align center
+
+.soc-t
+	display inline-block
+	width 1em
+	height 1em
+	background url(../img/twitter.svg) center center/cover no-repeat
+
+a.t-link
+	color #76a9ea
+
+.section-title
+	border-bottom 2px solid main
+	padding-bottom 20px
+
+.footer .wrap
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	sm justify-content center
+	sm text-align center
+	xs justify-content center
+	xs text-align center
+
+	.copy
+	.author
+		col 6
+		col 6 'lg'
+		col 6 'md'
+		col 12 'sm'
+		col 12 'xs'
+	.author
+		text-align right
+		sm text-align center
+		xs text-align center
+i.love-icon
+i.stylesam-icon
+	display inline-block
+	width 1em
+	height 1em
+	background-repeat no-repeat
+	background-size cover
+	background-position center center
+
+i.love-icon
+	background-image url(../img/love.svg)
+
+i.stylesam-icon
+	position absolute
+	top -13px
+	left 0
+
+	width 2em
+	height 4em
+	background-image url(../img/stylesam.svg)
+
+.footer
+	padding 20px 0
+	background linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6)
+
+.stylesam-link
+	position relative
+	margin-left 10px

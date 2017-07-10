@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Nunito|Ubuntu+Mono");
+html,
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 780px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 560px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Josefin Slab', serif;
+}
+code[class*="language-"],
+pre[class*="language-"],
+code.inline {
+  font-family: 'Ubuntu Mono', Monaco, 'Andale Mono', Consolas, monospace;
+  tab-size: 2;
+}
+code.inline {
+  color: #f77;
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 4px;
+  border-radius: 5px;
+}
+a {
+  color: #0cffae;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+section {
+  padding: 10px;
+  margin-bottom: 4rem;
+}
+.main {
+  position: relative;
+}
+.content section {
+  margin-bottom: 0;
+}
+.wrap {
+  max-width: 960px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1300px) {
+  .wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .wrap {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .wrap {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+.logo {
+  width: 350px;
+  margin: 0 auto;
+}
+.logo .logo-object {
+  transform: rotate(45deg);
+}
+.title {
+  font-size: 6rem;
+  margin: 0.25em 0;
+}
+.title-css {
+  color: #7effd4;
+}
+.descr,
+.title,
+.social {
+  text-align: center;
+}
+.soc-t {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url("../img/twitter.svg") center center/cover no-repeat;
+}
+a.t-link {
+  color: #76a9ea;
+}
+.section-title {
+  border-bottom: 2px solid #7effd4;
+  padding-bottom: 20px;
+}
+.footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 780px) {
+  .footer .wrap {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 780px) {
+  .footer .wrap {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 560px) {
+  .footer .wrap {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 560px) {
+  .footer .wrap {
+    text-align: center;
+  }
+}
+.footer .wrap .copy,
+.footer .wrap .author {
+  width: calc( 50% - 30px );
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (max-width: 1300px) {
+  .footer .wrap .copy,
+  .footer .wrap .author {
+    width: calc( 50% - 30px );
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .footer .wrap .copy,
+  .footer .wrap .author {
+    width: calc( 50% - 20px );
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .footer .wrap .copy,
+  .footer .wrap .author {
+    width: calc( 100% - 2% );
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .footer .wrap .copy,
+  .footer .wrap .author {
+    width: calc( 100% - 1% );
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+.footer .wrap .author {
+  text-align: right;
+}
+@media screen and (max-width: 780px) {
+  .footer .wrap .author {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 560px) {
+  .footer .wrap .author {
+    text-align: center;
+  }
+}
+i.love-icon,
+i.stylesam-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+i.love-icon {
+  background-image: url("../img/love.svg");
+}
+i.stylesam-icon {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  width: 2em;
+  height: 4em;
+  background-image: url("../img/stylesam.svg");
+}
+.footer {
+  padding: 20px 0;
+  background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+}
+.stylesam-link {
+  position: relative;
+  margin-left: 10px;
+}
