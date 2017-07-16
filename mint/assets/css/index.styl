@@ -30,14 +30,21 @@ code.inline
 	border-radius 5px
 
 a
-	color main - 30%
+	color #3597FC
 	text-decoration none
 	&:hover
+		color #60AEFF
 		text-decoration underline
 
 section
 	padding 10px
 	margin-bottom 4rem
+
+ul
+	list-style-type none
+	margin 0
+	padding 0
+
 
 .main
 	position relative
@@ -78,6 +85,25 @@ a.t-link
 	border-bottom 2px solid main
 	padding-bottom 20px
 
+.section-title
+.sub-section-title
+	position relative
+	> .section-link
+		opacity 0
+
+		position absolute
+		top 0
+		left -1.5em
+
+		display inline-block
+		width 1em
+		height @width
+		background url(../img/chain.svg) center center/cover no-repeat
+		
+		transition opacity .125s linear
+	&:hover > .section-link
+		opacity 1
+
 .footer .wrap
 	display flex
 	flex-wrap wrap
@@ -100,6 +126,7 @@ a.t-link
 		xs text-align center
 i.love-icon
 i.stylesam-icon
+i.icon
 	display inline-block
 	width 1em
 	height 1em
@@ -119,6 +146,9 @@ i.stylesam-icon
 	height 4em
 	background-image url(../img/stylesam.svg)
 
+i.icon-bug
+	background-image url(../img/bug.svg)
+
 .footer
 	padding 20px 0
 	background linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6)
@@ -126,3 +156,44 @@ i.stylesam-icon
 .stylesam-link
 	position relative
 	margin-left 10px
+
+.chagelog-header
+	padding 0 0 20px 0
+
+[class$='-mark']
+	display inline-block
+	border-radius 0 3px 3px 0
+	padding 0 5px
+	color #ecf0f1
+
+	transition padding-left .125s linear
+
+marks_colors = {
+	new: #27AE60,
+	implemented: #00BCD4,
+	bug: #E74C3C,
+	fixed: #F1C40F
+}
+
+for key, value in marks_colors
+	.{key}-mark
+		background-color value
+
+p.version
+	padding 10px 20px
+	border-left 10px solid #B6DAFF
+
+.changelog-list-item
+	display inline-flex
+	width 100%
+	align-items flex-start
+	&:hover > [class$='-mark']
+		padding-left 15px
+
+.changelog-list
+	> li
+		margin 5px 0
+
+.item-content
+	display inline-block
+	padding 0 5px

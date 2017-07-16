@@ -43,15 +43,21 @@ code.inline {
   border-radius: 5px;
 }
 a {
-  color: #0cffae;
+  color: #3597fc;
   text-decoration: none;
 }
 a:hover {
+  color: #60aeff;
   text-decoration: underline;
 }
 section {
   padding: 10px;
   margin-bottom: 4rem;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .main {
   position: relative;
@@ -120,6 +126,26 @@ a.t-link {
 .section-title {
   border-bottom: 2px solid #7effd4;
   padding-bottom: 20px;
+}
+.section-title,
+.sub-section-title {
+  position: relative;
+}
+.section-title > .section-link,
+.sub-section-title > .section-link {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url("../img/chain.svg") center center/cover no-repeat;
+  transition: opacity 0.125s linear;
+}
+.section-title:hover > .section-link,
+.sub-section-title:hover > .section-link {
+  opacity: 1;
 }
 .footer .wrap {
   display: flex;
@@ -198,7 +224,8 @@ a.t-link {
   }
 }
 i.love-icon,
-i.stylesam-icon {
+i.stylesam-icon,
+i.icon {
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -217,6 +244,9 @@ i.stylesam-icon {
   height: 4em;
   background-image: url("../img/stylesam.svg");
 }
+i.icon-bug {
+  background-image: url("../img/bug.svg");
+}
 .footer {
   padding: 20px 0;
   background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
@@ -224,4 +254,45 @@ i.stylesam-icon {
 .stylesam-link {
   position: relative;
   margin-left: 10px;
+}
+.chagelog-header {
+  padding: 0 0 20px 0;
+}
+[class$='-mark'] {
+  display: inline-block;
+  border-radius: 0 3px 3px 0;
+  padding: 0 5px;
+  color: #ecf0f1;
+  transition: padding-left 0.125s linear;
+}
+.new-mark {
+  background-color: #27ae60;
+}
+.implemented-mark {
+  background-color: #00bcd4;
+}
+.bug-mark {
+  background-color: #e74c3c;
+}
+.fixed-mark {
+  background-color: #f1c40f;
+}
+p.version {
+  padding: 10px 20px;
+  border-left: 10px solid #b6daff;
+}
+.changelog-list-item {
+  display: inline-flex;
+  width: 100%;
+  align-items: flex-start;
+}
+.changelog-list-item:hover > [class$='-mark'] {
+  padding-left: 15px;
+}
+.changelog-list > li {
+  margin: 5px 0;
+}
+.item-content {
+  display: inline-block;
+  padding: 0 5px;
 }

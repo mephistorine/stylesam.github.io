@@ -37,8 +37,11 @@
 					<p>Responsive Stylus micro framework</p>
 				</div>
 			</header>
-			<section>
-				<h2 class="section-title">Mint Settings</h2>
+			<section id='mint-settings-section'>
+				<h2 class="section-title">
+					<a href='#mint-settings-section' class='section-link'></a>
+					Mint Settings
+				</h2>
 				<div class="content">
 					<p>Let's start with the global settings in Mint, look like this.</p>
 					<ul>
@@ -68,241 +71,327 @@ mint = {
 }</code></pre>
 					</div>
 				</div>
-			</section>
+			</section> <!-- #mint-settings -->
 
-			<section>
-				<h2 class='section-title'>Mint API</h2>
+			<section id='mint-api-section'>
+				<h2 class='section-title'>
+					<a href='#mint-api-section' class='section-link'></a>
+					Mint API
+				</h2>
 				<div class="content">
-					<section>
-						<h3>Container function</h3>
-						<p><code class="language-stylus">container([ int max_width = mint.container_max_width ])</code> - Sets the default properties for the container</p>
-					</section>
-					<section>
-						<h4>Parameters</h4>
-						<ul>
-							<li><code class="language-markup">max_width</code> - Maximum width of the container (<code class='inline'>px</code>)</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Examples:</h4>
-						<div class="code">
-							<pre><code class="language-stylus line-numbers">.container
+					<section id='container-func-section'>
+						<section>
+							<h3 class='sub-section-title'>
+								<a href='#container-func-section' class='section-link'></a>
+								Container function
+							</h3>
+							<p><code class="language-stylus">container([ int max_width = mint.container_max_width ])</code> - Sets the default properties for the container</p>
+						</section>
+						<section>
+							<h4>Parameters</h4>
+							<ul>
+								<li><code class="language-markup">max_width</code> - Maximum width of the container (<code class='inline'>px</code>)</li>
+							</ul>
+						</section>
+						<section>
+							<h4>Examples:</h4>
+							<div class="code">
+								<pre><code class="language-stylus line-numbers">.container
 	container(960px)</code></pre>
-							<p>Yields:</p>
-							<pre><code class="language-css line-numbers">.container {
-  max-width: 960px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 0 auto;
+								<p>Yields:</p>
+								<pre><code class="language-css line-numbers">.container {
+	max-width: 960px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0 auto;
 }
 @media screen and (max-width: 1300px) {
-  .container {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 }
 @media screen and (max-width: 960px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 @media screen and (max-width: 780px) {
-  .container {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
+	.container {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
 }
 @media screen and (max-width: 560px) {
-  .container {
-    padding-left: 1%;
-    padding-right: 1%;
-  }
+	.container {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
 }</code></pre>
-						</div>
+							</div>
+						</section>
 					</section>
+					
 
-					<section>
-						<h3>Flex-row function</h3>
-						<p>
-							<code class="language-stylus">flex-row()</code> - Reduction of properties <code class="inline">display: flex;</code> and <code class="inline">flex-wrap: wrap;</code>
-						</p>
-					</section>
-					<section>
-						<h4>Examples:</h4>
-						<div class="code">
+					<section id='flex-row-func-section'>
+						<section>
+							<h3 class='sub-section-title'>
+								<a href='#flex-row-func-section' class='section-link'></a>
+								Flex-row function
+							</h3>
+							<p>
+								<code class="language-stylus">flex-row()</code> - Reduction of properties <code class="inline">display: flex;</code> and <code class="inline">flex-wrap: wrap;</code>
+							</p>
+						</section>
+						<section>
+							<h4>Examples:</h4>
+							<div class="code">
 							<pre><code class="language-stylus line-numbers">.container
 	flex-row()</code></pre>
 							<p>Yields:</p>
 							<pre><code class="language-css line-numbers">.container {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }</code></pre>
-						</div>
+							</div>
+						</section>
 					</section>
 
-					<section>
-						<h3>Col function</h3>
-						<p>
-							<code class="language-stylus">col( int count [, string break = 'all'] )</code> - Defines a column
-						</p>
-					</section>
-					<section>
-						<h4>Parameters</h4>
-						<ul>
-							<li><code class="language-markup">count</code> - Column width</li>
-							<li>
-								<code class="language-markup">break</code> - The breakpoint of resolution. Possible values:
-								<code class="inline">lg</code>,
-								<code class="inline">md</code>,
-								<code class="inline">sm</code>,
-								<code class="inline">xs</code>
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Examples:</h4>
-						<h4>Example &#35;1</h4>
-						<div class="code">
+					<section id='col-func-section'>
+						<section>
+							<h3 class='sub-section-title'>
+								<a href='#col-func-section' class='section-link'></a>
+								Col function
+							</h3>
+							<p>
+								<code class="language-stylus">col( int count [, string break = 'all'] )</code> - Defines a column
+							</p>
+						</section>
+						<section>
+							<h4>Parameters</h4>
+							<ul>
+								<li><code class="language-markup">count</code> - Column width</li>
+								<li>
+									<code class="language-markup">break</code> - The breakpoint of resolution. Possible values:
+									<code class="inline">lg</code>,
+									<code class="inline">md</code>,
+									<code class="inline">sm</code>,
+									<code class="inline">xs</code>
+								</li>
+							</ul>
+						</section>
+						<section>
+							<h4>Examples:</h4>
+							<h4>Example &#35;1</h4>
+							<div class="code">
 							<pre><code class="language-stylus line-numbers">.col
-  col( 2 )
-  col( 2, 'lg' )
-  col( 3, 'md' )
-  col( 6, 'sm' )
-  col( 12, 'sm' )</code></pre>
+	col(2)
+	col(2, 'lg')
+	col(3, 'md')
+	col(6, 'sm')
+	col(12, 'xs')</code></pre>
 							<p>Yields:</p>
 							<pre><code class="language-css line-numbers">.col {
-  width: calc( 16.666666666666668% - 30px );
+  flex-basis: calc( 16.666666666666668% - 30px );
   padding-left: 15px;
   padding-right: 15px;
 }
 @media screen and (max-width: 1300px) {
   .col {
-    width: calc( 16.666666666666668% - 30px );
+    flex-basis: calc(16.666666666666668% - 30px);
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 @media screen and (max-width: 960px) {
   .col {
-    width: calc( 25% - 20px );
+    flex-basis: calc(25% - 20px);
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 @media screen and (max-width: 780px) {
   .col {
-    width: calc( 50% - 2% );
+    flex-basis: calc(50% - 2%);
     padding-left: 1%;
     padding-right: 1%;
-  }
-}
-@media screen and (max-width: 780px) {
-  .col {
-    width: calc( 100% - 2% );
-    padding-left: 1%;
-    padding-right: 1%;
-  }
-}</code></pre>
-						</div>
-						<h4>Example #2 - without second parameter</h4>
-						<div class="code">
-							<pre><code class="language-stylus line-numbers">.col
-  col( 2 )</code></pre>
-							<p>Yields:</p>
-							<pre><code class="language-css line-numbers">.col {
-  width: calc( 16.666666666666668% - 30px );
-  padding-left: 15px;
-  padding-right: 15px;
-}</code></pre>
-						</div>
-
-						<h4>Example #3 - with second parameter</h4>
-						<div class="code">
-							<pre><code class="language-stylus line-numbers">.col
-  col( 2, 'lg' )</code></pre>
-							<p>Yields:</p>
-							<pre><code class="language-css line-numbers">@media screen and (max-width: 1300px) {
-  .col {
-    width: calc( 16.666666666666668% - 30px );
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}</code></pre>
-						</div>
-
-						<h4>Example #3.1 - alternative syntax</h4>
-						<div class="code">
-							<pre><code class="language-stylus line-numbers">.col
-  col 2 'lg'</code></pre>
-							<p>Yields:</p>
-							<pre><code class="language-css line-numbers">@media screen and (max-width: 1300px) {
-  .col {
-    width: calc( 16.666666666666668% - 30px );
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}</code></pre>
-						</div>
-					</section>
-
-					<section>
-						<h3>Breakpoint function</h3>
-						<p>
-							<code class="language-stylus">lg( string property, string value )</code> - Adds this selector with the specified property in the media query of the corresponding breakpint
-						</p>
-						<p>
-							<h4>Similar functions</h4>
-							<ul>
-								<li> <code class='inline'>md()</code> </li>
-								<li> <code class='inline'>sm()</code> </li>
-								<li> <code class='inline'>xs()</code> </li>
-							</ul>
-						</p>
-					</section>
-					<section>
-						<h4>Parameters</h4>
-						<ul>
-							<li><code class="language-markup">property</code> - Propery name</li>
-							<li><code class="language-markup">value</code> - Property value</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Examples:</h4>
-						<h4>Example &#35;1</h4>
-						<div class="code">
-							<pre><code class="language-stylus line-numbers">.col
-  lg(display, none)
-  md(display, block)
-  sm(display, flex)
-  xs(display, inline-block)</code></pre>
-							<p>Yields:</p>
-							<pre><code class="language-css line-numbers">@media screen and (max-width: 1300px) {
-  .col {
-    display: none;
-  }
-}
-@media screen and (max-width: 960px) {
-  .col {
-    display: block;
-  }
-}
-@media screen and (max-width: 780px) {
-  .col {
-    display: flex;
   }
 }
 @media screen and (max-width: 560px) {
   .col {
-    display: inline-block;
+    flex-basis: calc(100% - 1%);
+    padding-left: 1%;
+    padding-right: 1%;
   }
 }
 </code></pre>
-						</div>
+							</div>
+							<h4>Example #2 - without second parameter</h4>
+							<div class="code">
+								<pre><code class="language-stylus line-numbers">.col
+	col( 2 )</code></pre>
+								<p>Yields:</p>
+							<pre><code class="language-css line-numbers">.col {
+	width: calc( 16.666666666666668% - 30px );
+	padding-left: 15px;
+	padding-right: 15px;
+}</code></pre>
+							</div>
+
+							<h4>Example #3 - with second parameter</h4>
+							<div class="code">
+								<pre><code class="language-stylus line-numbers">.col
+	col( 2, 'lg' )</code></pre>
+								<p>Yields:</p>
+							<pre><code class="language-css line-numbers">@media screen and (max-width: 1300px) {
+	.col {
+		width: calc( 16.666666666666668% - 30px );
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}</code></pre>
+							</div>
+
+							<h4>Example #3.1 - alternative syntax</h4>
+							<div class="code">
+								<pre><code class="language-stylus line-numbers">.col
+	col 2 'lg'</code></pre>
+								<p>Yields:</p>
+							<pre><code class="language-css line-numbers">@media screen and (max-width: 1300px) {
+	.col {
+		width: calc( 16.666666666666668% - 30px );
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}</code></pre>
+							</div>
+						</section>
 					</section>
+					
+					<section id='breakpoint-func-section'>
+						<section>
+							<h3 class='sub-section-title'>
+								<a href='#breakpoint-func-section' class='section-link'></a>
+								Breakpoint function
+							</h3>
+							<p>
+								<code class="language-stylus">lg( string property, string value )</code> - Adds this selector with the specified property in the media query of the corresponding breakpint
+							</p>
+							<p>
+								<h4>Similar functions</h4>
+								<ul>
+									<li> <code class='inline'>md()</code> </li>
+									<li> <code class='inline'>sm()</code> </li>
+									<li> <code class='inline'>xs()</code> </li>
+								</ul>
+							</p>
+						</section>
+						<section>
+							<h4>Parameters</h4>
+							<ul>
+								<li><code class="language-markup">property</code> - Propery name</li>
+								<li><code class="language-markup">value</code> - Property value</li>
+							</ul>
+						</section>
+						<section>
+							<h4>Examples:</h4>
+							<h4>Example &#35;1</h4>
+							<div class="code">
+								<pre><code class="language-stylus line-numbers">.col
+	lg(display, none)
+	md(display, block)
+	sm(display, flex)
+	xs(display, inline-block)</code></pre>
+								<p>Yields:</p>
+							<pre><code class="language-css line-numbers">@media screen and (max-width: 1300px) {
+	.col {
+		display: none;
+	}
+}
+@media screen and (max-width: 960px) {
+	.col {
+		display: block;
+	}
+}
+@media screen and (max-width: 780px) {
+	.col {
+		display: flex;
+	}
+}
+@media screen and (max-width: 560px) {
+	.col {
+		display: inline-block;
+	}
+}
+</code></pre>
+							</div>
+						</section>
+					</section> <!-- #breakpoint-func-section -->
 				</div>
-			</section>
-		</div>
+			</section><!-- #mint-api -->
+			
+			<section class='chagelog-section' id="changelog-section">
+				<h2 class="section-title">
+					<a href='#changelog-section' class='section-link'></a>
+					Changelog
+				</h2>
+				<div class="content changelog-content">
+					<div class="chagelog-header">
+						<p>
+							<i class="icon icon-bug"></i>
+							<span>Are you found a bug ?</span>
+							<span>Create an issue <a href='//github.com/stylesam/mint/issues'>here</a></span>
+						</p>
+					</div>
+					<div class="changelog-main-content">
+						
+						<p class="version">
+							<span>
+								<a href='//github.com/stylesam/mint/releases/tag/v0.0.2'>
+									<strong>v0.0.2</strong>
+								</a>
+							</span>
+							<span>(Lasted update on <time datetime="2017-07-12T14:50"><strong>Jul 12</strong> 2017</time>)</span>							
+						</p>
+						<ul class='changelog-list'>
+							<li class='changelog-list-item'>
+								<span class="new-mark">new</span>
+								<span class='item-content'>Added a custom function like <code class="inline">lg</code> and etc. <a href='//github.com/stylesam/mint/blob/master/mint/inc/_functions.styl'>view</a></span>
+							</li>
+							<li class='changelog-list-item'>
+								<span class="new-mark">new</span>
+								<span class='item-content'>Added the function to change the order of the columns <code class="inline">col-queue</code> <a href='//github.com/stylesam/mint/blob/master/mint/inc/_grid.styl'>view</a></span>
+							</li>
+							<li class='changelog-list-item'>
+								<span class="new-mark">new</span>
+								<span class='item-content'>Added the function for autofill <code class="inline">col-auto</code> <a href='//github.com/stylesam/mint/blob/master/mint/inc/_grid.styl'>view</a></span>
+							</li>
+							<li class='changelog-list-item'>
+								<span class="new-mark">new</span>
+								<span class='item-content'>Added processing of the second parameter in <code class="inline">col</code> function as the number for the media query condition <a href='//github.com/stylesam/mint/blob/master/mint/inc/_grid.styl'>view</a></span>
+							</li>
+							<li class='changelog-list-item'>
+								<span class="new-mark">new</span>
+								<span class='item-content'>Added to all variable names the <code class="inline">$</code> sign, so as not to confuse it with the <code class="inline">CSS</code></span>
+							</li>
+							<li class='changelog-list-item'>
+								<span class="fixed-mark">fixed</span>
+								<span class='item-content'>Now uses <code class="inline">flex-basis</code> property instead of <code class="inline">width</code></span>
+							</li>
+							<li class='changelog-list-item'>
+								<span class="fixed-mark">fixed</span>
+								<span class='item-content'>Replaced <code class="inline">@media</code> queries by <code class="inline">lg</code> and etc. functions in <code class="inline">col</code> function</span>
+							</li>
+							<li class='changelog-list-item'>
+								<span class="fixed-mark">fixed</span>
+								<span class='item-content'>Replaced the word <code class="inline">offset</code> by <code class="inline">gutter</code></span>
+							</li>
+						</ul>
+					</div><!-- .changelog-main-content -->
+				</div>
+			</section><!-- #chagelog-section -->
+		</div><!-- .wrap -->
 	</main>
 	<footer class='footer'>
 		<div class="wrap">
@@ -311,7 +400,7 @@ mint = {
 				<span>Made with</span>
 				<i class="love-icon"></i>
 				<span>by</span>
-				<a href='http://stylesam.com' class='stylesam-link'><i class="stylesam-icon"></i></a>				
+				<a href='//stylesam.com' class='stylesam-link'><i class="stylesam-icon"></i></a>				
 				</p>
 		</div>
 	</footer>
