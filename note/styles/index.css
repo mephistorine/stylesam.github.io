@@ -1,0 +1,106 @@
+.light {
+	--bg-color: #fff;
+	--text-color: #000;
+}
+
+.dark {
+	--bg-color: #21262e;
+	--text-color: #cfd0d2;
+}
+
+.wrap {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+
+	transition: background-color .125s linear, color .125s linear;
+}
+
+a {
+	text-decoration: none;
+}
+
+.dark a {
+	color: #39b29d;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	line-height: 1;
+	position: relative;
+	font-size: 18px;
+}
+
+.main {
+	height: 100vh;
+	width: 80vw;
+	padding: .5rem;
+	outline: none;
+	margin: 0 auto;
+	border: none;
+
+	background-color: var(--bg-color);
+	color: var(--text-color);
+
+	transition: background-color .125s linear, color .125s linear;
+}
+
+.author {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	margin: 0;
+}
+
+.save-btn,
+.download-btn,
+.switch-theme-btn {
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	background: none;
+	cursor: pointer;
+	display: block;
+	margin: .5rem 0;
+}
+
+.save-btn {
+	background: url(../images/icons/cloud-save.svg) no-repeat;
+	background-size: cover;
+}
+
+.download-btn {
+	background: url(../images/icons/download.svg) no-repeat;
+	background-size: cover;
+}
+
+.switch-theme-btn {
+	background: url(../images/icons/moon.svg) no-repeat;
+	background-size: cover;
+}
+
+.dark .switch-theme-btn {
+	background: url(../images/icons/moon-dark.svg) no-repeat;
+	background-size: cover;
+}
+
+.gameplay{
+  position: absolute;
+  padding: 0 .5rem;
+}
+
+.app {
+	text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+	.author {
+	  transform: rotate(-90deg);
+    transform-origin: left;
+	}
+
+	.app {
+		text-align: right;
+	}
+
+}
