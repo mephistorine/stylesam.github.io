@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS Masking demo</title>
+
+		<style>
+			html, body, #flesh {
+			  position: relative;
+			  margin: 0;
+			  height: auto;
+			  width: 100%;
+			  background: url("img/hand-xray-flesh.jpg") no-repeat;
+			  background-size: 100% auto;
+			}
+
+			#bone {
+			  width: 100%;
+			  margin: 0;
+			  -webkit-mask-image: url("img/xray-machine.png");
+			          mask-image: url("img/xray-machine.png");
+			  -webkit-mask-repeat: no-repeat;
+			          mask-repeat: no-repeat;
+			  -webkit-mask-size: 150px;
+			          mask-size: 150px;
+			  cursor: none;
+			}
+
+			* {
+			  box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+
+		<article id="flesh">
+		  <img src="img/hand-xray-bone.jpg" id="bone">
+		</article>
+		
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+		    var currentMousePos = { x: -1, y: -1 };
+		    $('#flesh').mousemove(function(e) {
+	        currentMousePos.x = e.pageX;
+	        currentMousePos.y = e.pageY;
+		      
+		      $('#bone').css('-webkit-mask-position-x', currentMousePos.x - 75);
+		      $('#bone').css('-webkit-mask-position-y', currentMousePos.y - 75)
+		    });
+			});
+		</script>
+	</body>
+</html>
